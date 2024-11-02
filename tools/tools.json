@@ -1,0 +1,98 @@
+[
+    {
+        "title": "Keywords Everywhere",
+        "url": "keyword-research/keywords-everywhere-review.html",
+        "description": "Turns your browser into a keyword research tool.",
+        "link": "../keyword-research/keywords-everywhere-review.html",
+        "image": {
+            "src": "../images/keywords-everywhere-review-logo.png",
+            "alt": "Keywords Everywhere Logo",
+            "width": "140",
+            "height": "140"
+        },
+        "category": "keyword-research"
+    },
+
+    {
+        "title": "BuzzSumo",
+        "url": "competitor-analysis/buzz-sumo-review.html",
+        "description": "An excellent tool if you need to keep up to date with trends.",
+        "link": "../competitor-analysis/buzz-sumo-review.html",
+        "image": {
+            "src": "../images/buzzsumo-logo.png",
+            "alt": "BuzzSumo Logo",
+            "width": "200",
+            "height": "88"
+        },
+        "category": "competitor-analysis"
+    },
+
+    {
+        "title": "Ahrefs",
+        "url": "search-engine-optimization/ahrefs-review.html",
+        "description": "Ahrefs is THE tool if you want to do in-depth SEO and get the most data.",
+        "link": "../search-engine-optimization/ahrefs-review.html",
+        "image": {
+            "src": "../images/ahrefs-logo.png",
+            "alt": "Ahrefs Logo",
+            "width": "200",
+            "height": "69"
+        },
+        "category": "search-engine-optimization"
+    },
+
+    {
+        "title": "Semrush",
+        "url": "search-engine-optimization/semrush-review.html",
+        "description": "Semrush is THE tool if want to do SEO as an agency.",
+        "link": "../search-engine-optimization/semrush-review.html",
+        "image": {
+            "src": "../images/semrush-logo.png",
+            "alt": "Semrush Logo",
+            "width": "200",
+            "height": "113"
+        },
+        "category": "search-engine-optimization"
+    },
+
+    {
+        "title": "SpyFu",
+        "url": "ppc-management/spyfu-review.html",
+        "description": "An excellent tool for PPC management",
+        "link": "../ppc-management/spyfu-review.html",
+        "image": {
+            "src": "../images/spyfu-logo.png",
+            "alt": "SpyFu Logo",
+            "width": "200",
+            "height": "95"
+        },
+        "category": "ppc-management"
+    },
+
+    {
+        "title": "GA4",
+        "url": "analytics-and-reporting/ga4-review.html",
+        "description": "This tool gives you THE most accurate data about your website.",
+        "link": "../analytics-and-reporting/ga4-review.html",
+        "image": {
+            "src": "../images/ga4-logo.png",
+            "alt": "GA4 Logo",
+            "width": "200",
+            "height": "69"
+        },
+        "categories": ["analytics-and-reporting", "free-tools"]
+    },
+
+    {
+        "title": "Script Tool 1",
+        "description": "A brief description of Script Tool 1.",
+        "link": "https://example.com/script-tool1",
+        "image": {
+            "src": "../images/script-logo.png",
+            "alt": "Script Tool 1 Logo",
+            "width": "200",
+            "height": "203"
+        },
+        "category": "scripts"
+    }
+]

@@ -1,0 +1,748 @@
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Roboto Serif', serif; /* Set Roboto Serif for the entire body */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333; /* Dark gray for text for better readability */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Content Text Styles */
+.content {
+    font-family: 'Roboto', sans-serif; /* Set Roboto for content text */
+}
+
+/* Header Styles */
+header {
+    background: #1F3B73; /* Deep Blue */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Ensure positioning for the toggle button */
+}
+
+/* Center the nav */
+nav {
+    flex: 1; /* Allow nav to take available space */
+    text-align: center; /* Center the nav items */
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    position: relative; /* Position relative for dropdown positioning */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4AB7FF; /* Sky Blue */
+}
+
+/* Dropdown Menu Styles */
+nav ul .dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position it absolutely */
+    background-color: #1F3B73; /* Match the header background */
+    min-width: 160px; /* Set a minimum width */
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+nav ul .dropdown li {
+    padding: 10px; /* Add padding to dropdown items */
+}
+
+nav ul .dropdown li a {
+    color: white; /* White text for dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make the entire area clickable */
+}
+
+nav ul .dropdown li a:hover {
+    background-color: #4AB7FF; /* Change background on hover */
+}
+
+/* Call-to-Action Button Styles */
+.cta-button a {
+    background: #FF6F00; /* Bright Orange */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button a:hover {
+    background: #e65c00; /* Darker shade for hover effect */
+}
+
+/* Hero Section Styles */
+#hero {
+    background: #4AB7FF; /* Sky Blue */
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+#hero p {
+    font-size: 1.2em;
+}
+
+/* Featured Reviews and Blog Posts Styles */
+.reviews-container, .blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.reviews-container div, .blog-container div {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    flex: 1 1 300px; /* Responsive flex items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-container h3, .blog-container h3 {
+    color: #1F3B73; /* Deep Blue */
+    margin: 0 20px; /* Add margin to the left and right of the headings */
+}
+
+/* Add margin to h2 elements */
+h2 {
+    margin: 20px 20px; /* Add margin to the left and right of h2 elements */
+}
+
+/* Footer Styles */
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top:10vh;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        display: none; /* Hide the nav by default */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
+        background-color: white; /* Background color */
+        position: absolute; /* Position absolute */
+        top: 60px; /* Position below the header */
+        left: 0; /* Align to the left */
+        z-index: 1000; /* Ensure it is above other content */
+    }
+
+    nav.active {
+        display: flex; /* Show nav when active */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center nav items */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Adjust margin for vertical stacking */
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle button */
+        margin-left: auto; /* Align to the right */
+    }
+}
+
+#contact {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 5px; /* Rounded corners */
+    margin: 20px; /* Margin around the section */
+}
+
+#contact h2 {
+    color: #1F3B73; /* Deep Blue */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact label {
+    margin-bottom: 5px; /* Space below labels */
+}
+
+#contact input, #contact textarea {
+    margin-bottom: 15px; /* Space below inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+#contact button {
+    padding: 10px;
+    background-color: #1F3B73; /* Deep Blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #155a8a; /* Darker blue on hover */
+}
+
+/* Basic styles for the navigation */
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+nav > ul > li {
+    position: relative; /* Position relative for dropdown */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding */
+    display: block; /* Make links block elements */
+}
+
+/* Styles for the toggle button */
+.nav-toggle {
+    display: none; /* Hidden by default */
+    font-size: 24px; /* Size of the hamburger icon */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide the nav by default */
+        flex-direction: column; /* Stack items vertically */
+        width: 250px; /* Set a fixed width for the menu */
+        background-color: #1F3B73; /* Match the header background color */
+        position: absolute; /* Position absolute */
+        top: 60px; /* Position below the header */
+        right: 0; /* Align to the right */
+        z-index: 1000; /* Ensure it is above other content */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for depth */
+    }
+
+    nav.active {
+        display: flex; /* Show nav when active */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-end; /* Align nav items to the start (left) */
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle button */
+        margin-left: auto; /* Align to the right */
+    }
+}
+
+.review-logo {
+    width: 60px; /* Adjust size as needed */
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 24px; /* Larger font size for the product name */
+    margin: 0; /* Remove default margin */
+}
+
+p {
+    margin: 5px 0; /* Small margin for the description */
+}
+
+/* CTA Button Styles */
+.cta-button {
+    margin-left: auto; /* Push the button to the right */
+    padding: 15px 20px;
+    background-color: #007BFF; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 40px; /* Space between sections */
+    background-color: #fff; /* White background for sections */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+    font-size: 20px; /* Font size for section titles */
+    margin-top: 0; /* Remove default margin */
+}
+
+/* List Styles */
+ul {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px; /* Indent list items */
+}
+
+footer {
+    text-align: center; /* Centered footer text */
+    margin-top: 20px; /* Space above footer */
+    font-size: 14px; /* Smaller font size for footer */
+    color: #666; /* Lighter color for footer text */
+}
+
+/* Container for the main content */
+.container {
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Padding on the left and right */
+}
+
+/* Product Header Styles */
+.product-header {
+    display: flex; /* Use flexbox to align logo and product info */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space below the product header */
+    margin-top: 10px;
+}
+
+.product-header .logo {
+    width: 100px; /* Adjust size as needed */
+    margin-right: 20px; /* Space between logo and text */
+}
+
+.product-info {
+    flex-grow: 1; /* Allow this section to take up remaining space */
+}
+
+.product-info h1 {
+    font-size: 24px; /* Larger font size for the product name */
+    margin: 0; /* Remove default margin */
+}
+
+.product-info p {
+    margin: 5px 0; /* Small margin for the description */
+}
+
+
+/* Accordion styles */
+
+
+.accordion {
+    display: flex; /* Use flexbox to arrange items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    margin: 20px 0; /* Space around the accordion */
+    gap: 10px; /* Space between accordion items */
+}
+
+.accordion-item {
+    flex: 1; /* Allow items to grow and fill available space */
+    min-width: 200px; /* Minimum width for each accordion item */
+    max-width: 300px; /* Maximum width for each accordion item */
+    margin-bottom: 0; /* Remove bottom margin since we are using flex */
+}
+
+.accordion-title {
+    background: rgba(0, 0, 0, .05);
+    border-left: 15px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--color-title);
+    transition: background 0.3s;
+    width: 100%; /* Full width of the item */
+}
+
+.accordion-title:hover {
+    background: rgba(0, 0, 0, .1); /* Change background on hover */
+}
+
+.accordion-content {
+    display: none; /* Hidden by default */
+    padding: 10px; /* Padding for content */
+    background-color: #f1f1f1; /* Light background for content */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 5px; /* Space above content */
+}
+
+.accordion-title::before {
+    content: ''; /* Placeholder for icon */
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    background: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.6066 12H1.3934' stroke='%23202842' stroke-width='1.875' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 1.39343V22.6066' stroke='%23202842' stroke-width='1.875' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    transition: transform 0.3s;
+}
+
+.accordion-item[open] .accordion-title::before {
+    transform: rotate(45deg); /* Rotate icon when open */
+    content: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 12h22' stroke='%23202842' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 1v22' stroke='%23202842' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.accordion-content p {
+    margin: 0; /* Remove default margin */
+    color: var(--color-title);
+}
+
+/* Carousel for Similar Tools */
+
+.similar-tools-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide overflow to create a sliding effect */
+}
+
+.carousel-wrapper {
+    position: relative; /* Ensure buttons are positioned relative to this wrapper */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex; /* Use flexbox to arrange tools in a row */
+    transition: transform 0.5s ease; /* Smooth transition for sliding */
+    width: 100%; /* Set to 100% of the parent container */
+}
+
+.carousel div {
+    min-width: 200px; /* Set a minimum width for each tool block */
+    margin: 0 10px; /* Space between tool blocks */
+    flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+.carousel-button {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: 1px solid #ccc; /* Border for visibility */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 2rem; /* Adjust size as needed */
+    cursor: pointer;
+    z-index: 1; /* Ensure buttons are above the carousel */
+    padding: 10px; /* Padding for buttons */
+    position: absolute; /* Position buttons absolutely */
+}
+
+.carousel-button.prev {
+    left: 10px; /* Position left button */
+}
+
+.carousel-button.next {
+    right: 10px; /* Position right button */
+}
+
+/* Styles for the tools container */
+.tools-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with minimum width */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the container */
+}
+
+/* Styles for each tool box */
+
+.tool-box img {
+    max-width: 200px; /* Ensure the image does not exceed the width of its container */
+    max-height: 100%; /* Set a maximum height to maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the box without distortion */
+    margin-bottom: 15px; /* Add bottom margin to create space between image and text */
+}
+
+.tool-box {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    justify-content: space-between; /* Space items evenly */
+    background-color: white; /* White background for each tool box */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding inside the box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for tool boxes */
+.tool-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Styles for tool title */
+.tool-box h3 {
+    margin: 0 0 10px; /* Margin below the title */
+    font-size: 1.2em; /* Font size for the title */
+}
+
+
+
+
+/* Styles for the Read Review button */
+.read-review-button {
+    display: inline-block; /* Make it a block element */
+    margin: 10px auto 0; /* Center the button horizontally and add space above */
+    background-color: #007BFF; /* Primary button color */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    width: 150px; /* Set a fixed width for the button */
+    text-align: center; /* Center text inside the button */
+}
+
+/* Hover effect for the Read Review button */
+.read-review-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+/* Styles for the About Me section */
+#about-me {
+    padding: 20px 25vw; /* Add padding around the section with larger left and right margins */
+}
+
+/* Flexbox layout for the introductory text and image */
+.about-content {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 40px; /* Space below the introductory section */
+}
+
+/* Profile image styles */
+.profile-image {
+    width: 100%; /* Set width to 100% of the parent container */
+    max-width: 400px; /* Set a maximum width to prevent it from getting too large */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    margin: 20px 0; /* Add vertical margins around the image */
+    border: 5px solid #003366; /* Dark blue border */
+    box-sizing: border-box; /* Include border in the element's total width */
+}
+
+/* Introductory text styles */
+.intro-text {
+    text-align: center; /* Center text */
+    margin-bottom: 40px; /* Space below the text */
+}
+
+/* Styles for the cards container */
+.cards-container {
+    display: grid; /* Use grid layout for cards */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between cards */
+}
+
+/* Styles for each card */
+.card {
+    background-color: white; /* White background for each card */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+
+    #about-me {
+        padding: 20px 10vw; /* Add padding around the section with larger left and right margins */
+    }
+
+    .about-content {
+        align-items: center; /* Center items horizontally */
+    }
+
+    .profile-image {
+        margin-top: 20px; /* Add space above the image when it moves below the text */
+    }
+
+    .intro-text {
+        margin-bottom: 20px; /* Adjust margin for smaller screens */
+    }
+}
+
+
+
