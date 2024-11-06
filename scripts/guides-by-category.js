@@ -4,7 +4,7 @@ const loadGuidesByCategory = async (category) => {
         const response = await fetch('../guides.json'); // Adjusted path to guides.json
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
-        const guidesContainer = document.querySelector('.guides-container');
+        const guidesContainer = document.querySelector('.reviews-container');
         guidesContainer.innerHTML = ''; // Clear existing content
 
         // Filter guides by category

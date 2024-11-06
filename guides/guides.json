@@ -1,56 +1,50 @@
 [
     {
-        "title": "Understanding Backlinks",
+        "title": "Understanding Backlinks Basics",
         "description": "A comprehensive guide on what backlinks are and how to build them.",
-        "link": "/guides/backlinks/guide1.md",
+        "link": "/guides/backlinks/backlinks-basics.html",
         "category": "backlinks-guides"
     },
     {
-        "title": "Advanced Backlink Strategies",
-        "description": "Learn advanced techniques for acquiring high-quality backlinks.",
-        "link": "/guides/backlinks/guide2.md",
-        "category": "backlinks-guides"
-    },
-    {
-        "title": "Competitor Analysis Techniques",
+        "title": "Competitor Analysis Basics",
         "description": "Explore methods for analyzing your competitors effectively.",
-        "link": "/guides/competitor-analysis/guide1.md",
+        "link": "/guides/competitor-analysis/competitor-analysis-basics.html",
         "category": "competitor-analysis-guides"
     },
     {
         "title": "Data Analysis for SEO",
         "description": "Learn how to analyze data to improve your SEO strategies.",
-        "link": "/guides/data-analysis/guide1.md",
+        "link": "/guides/data-analysis/data-analysis-basics.html",
         "category": "data-analysis-guides"
     },
     {
         "title": "Internal Linking Best Practices",
         "description": "Discover the best practices for internal linking to boost SEO.",
-        "link": "/guides/internal-linking/guide1.md",
+        "link": "/guides/internal-linking/internal-linking-basics.html",
         "category": "internal-linking-guides"
     },
     {
         "title": "Keyword Research Techniques",
         "description": "A guide to effective keyword research for better SEO results.",
-        "link": "/guides/keyword-research/guide1.md",
+        "link": "/guides/keyword-research/keyword-research-basics.html",
         "category": "keyword-research-guides"
     },
     {
         "title": "On-Page Optimization Checklist",
         "description": "Ensure your pages are optimized with this comprehensive checklist.",
-        "link": "/guides/on-page-optimization/guide1.md",
+        "link": "/guides/on-page-optimization/on-page-optimization-basics.html",
         "category": "on-page-optimization-guides"
     },
     {
         "title": "Technical SEO Fundamentals",
         "description": "Understand the fundamentals of technical SEO for better site performance.",
-        "link": "/guides/technical-seo/guide1.md",
+        "link": "/guides/technical-seo/technical-seo-basics.html",
         "category": "technical-seo-guides"
     },
     {
         "title": "Website Audit Guide",
         "description": "Learn how to conduct a thorough website audit for SEO.",
-        "link": "/guides/website-audit/guide1.md",
+        "link": "/guides/website-audit/website-audit-basics.html",
         "category": "website-audit-guides"
     }
 ]

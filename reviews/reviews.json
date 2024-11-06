@@ -1,38 +1,13 @@
 [
     {
-        "title": "Keywords Everywhere Review",
-        "url": "keyword-research/keywords-everywhere-review.html",
-        "description": "Turns your browser into a keyword research tool.",
-        "file": "reviews/analytics-review.md",
-        "link": "../keyword-research/keywords-everywhere-review.html",
-        "image": "images/keywords-everywhere-review-logo.png"
-    },
+        "title": "Internal Links Script Review Video",
+        "description": "Enables you to visualise your internal links structure. Makes planning new internal links much easier.",
+        "link": "https://youtu.be/ZKWbTHoqlCA"
+    }
+    ,
     {
-        "title": "SEO Tool Review",
-        "url": "search-engine-optimization/review.html",
-        "description": "Great for SEO.",
-        "file": "reviews/seo-review.md",
-        "image": "images/seo-tool.jpg"
-    },
-    {
-        "title": "PPC Management Tool Review",
-        "url": "ppc-management/review.html",
-        "description": "Great for PPC.",
-        "file": "reviews/ppc-review.md",
-        "image": "images/ppc-tool.jpg"
-    },
-    {
-        "title": "Keyword Research Tool Review",
-        "url": "keyword-research/review.html",
-        "description": "Great for KW Research.",
-        "file": "reviews/keyword-review.md",
-        "image": "images/keyword-tool.jpg"
-    },
-    {
-        "title": "Data Analysis Tool Review",
-        "url": "data-analysis/review.html",
-        "description": "Great for Data Analysis.",
-        "file": "reviews/data-analysis-review.md",
-        "image": "images/data-analysis-tool.jpg"
+        "title": "Internal Links Script Review",
+        "description": "Useful for internal links planning.",
+        "link": "https://youtu.be/ZKWbTHoqlCA"
     }
 ]

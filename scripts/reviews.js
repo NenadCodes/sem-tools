@@ -1,12 +1,3 @@
-// Sample images array (you can replace these with actual image paths)
-const reviewImages = {
-    "Analytics Tool Review": "images/analytics-tool.jpg",
-    "SEO Tool Review": "images/seo-tool.jpg",
-    "PPC Management Tool Review": "images/ppc-tool.jpg",
-    "Keyword Research Tool Review": "images/keyword-tool.jpg",
-    "Data Analysis Tool Review": "images/data-analysis-tool.jpg"
-};
-
 // Function to load reviews from JSON
 const loadReviews = async () => {
     try {
@@ -17,16 +8,24 @@ const loadReviews = async () => {
         reviewsContainer.innerHTML = ''; // Clear existing content
 
         data.forEach(review => {
-            const reviewBlock = document.createElement('div');
-            const imageUrl = reviewImages[review.title] || ''; // Get the image URL from the array
+            const videoId = review.link.split('be/')[1] || review.link.split('v=')[1]?.split('&')[0]; // Extract video ID from the link
 
-            reviewBlock.innerHTML = `
-                <h3>${review.title}</h3>
-                <img src="${imageUrl}" alt="${review.title}" style="width: 100%; height: auto; border-radius: 5px;"/> <!-- Add image -->
-                <p>${review.description}</p>
-                <a href="${review.link}">Read Review</a>
-            `;
-            reviewsContainer.appendChild(reviewBlock);
+            if (videoId) {
+                const videoBlock = document.createElement('div');
+                videoBlock.innerHTML = `
+                    <h3>${review.title}</h3>
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; /* 16:9 Aspect Ratio */">
+                        <iframe 
+                            src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        </iframe>
+                    </div>
+                    <p>${review.description}</p>
+                `;
+                reviewsContainer.appendChild(videoBlock);
+            }
         });
     } catch (error) {
         console.error('Error fetching reviews:', error);

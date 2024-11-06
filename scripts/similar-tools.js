@@ -10,10 +10,16 @@ const loadTools = async () => {
         // Create tool blocks
         data.forEach(tool => {
             const toolBlock = document.createElement('div');
+            toolBlock.classList.add('tool-box'); // Add the tool-box class for styling
             toolBlock.innerHTML = `
-                <h3>${tool.title}</h3>
-                <p>${tool.description}</p>
-                <a href="${tool.link}" target="_blank">Visit Tool</a>
+
+                <a href="${tool.link}">
+                    <img src="${tool.image.src}" 
+                         alt="${tool.image.alt}" 
+                         width="${tool.image.width}" 
+                         height="${tool.image.height}" 
+                         style="width: 90%; height: auto; border-radius: 5px;"/> <!-- Make image clickable -->
+                </a>
             `;
             carousel.appendChild(toolBlock); // Append to the carousel
         });
@@ -34,13 +40,17 @@ const initCarousel = () => {
     // Function to update the carousel display
     const updateCarousel = () => {
         const itemWidth = tools[0].clientWidth + 20; // Width of each item plus margin
+        const maxIndex = tools.length - Math.floor(carousel.clientWidth / itemWidth); // Calculate max index based on visible items
+        currentIndex = Math.min(currentIndex, maxIndex); // Ensure currentIndex does not exceed maxIndex
         const offset = -currentIndex * itemWidth; // Calculate offset
         carousel.style.transform = `translateX(${offset}px)`; // Apply the transform to the carousel
     };
 
     // Event listeners for carousel buttons
     document.querySelector('.carousel-button.next').addEventListener('click', () => {
-        if (currentIndex < tools.length - 1) {
+        const itemWidth = tools[0].clientWidth + 20; // Width of each item plus margin
+        const maxIndex = tools.length - Math.floor(carousel.clientWidth / itemWidth); // Calculate max index
+        if (currentIndex < maxIndex) {
             currentIndex++;
             updateCarousel();
         }

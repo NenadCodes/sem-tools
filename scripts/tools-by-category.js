@@ -21,11 +21,18 @@ const loadToolsByCategory = async (category) => {
 
         filteredTools.forEach(tool => {
             const toolBlock = document.createElement('div');
+            toolBlock.classList.add('tool-box'); // Add the tool-box class for styling
             toolBlock.innerHTML = `
+                <a href="${tool.link}">
+                    <img src="${tool.image.src}" 
+                         alt="${tool.image.alt}" 
+                         width="${tool.image.width}" 
+                         height="${tool.image.height}" 
+                         style="width: 100%; height: auto; border-radius: 5px;"/> <!-- Make image clickable -->
+                </a>
                 <h3>${tool.title}</h3>
-                <img src="${tool.image}" alt="${tool.title}" style="width: 10%; height: auto; border-radius: 5px;"/> <!-- Add image -->
                 <p>${tool.description}</p>
-                <a href="${tool.link}" target="_blank">Visit Tool</a>
+                <a href="${tool.link}" target="_blank" class="read-review-button">Read Review</a> <!-- Button to read review -->
             `;
             toolsContainer.appendChild(toolBlock);
         });
@@ -49,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Free Tools': 'free-tools',
         'Keyword Research Tools': 'keyword-research',
         'PPC Management Tools': 'ppc-management',
-        'Search Engine Optimization Tools': 'search-engine-optimization'
+        'Search Engine Optimization': 'search-engine-optimization'
     };
 
     // Check for specific page titles to load tools by category

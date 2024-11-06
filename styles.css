@@ -6,6 +6,7 @@
     box-sizing: border-box;
   }
 
+
 body {
     font-family: 'Roboto Serif', serif; /* Set Roboto Serif for the entire body */
     margin: 0;
@@ -98,7 +99,28 @@ nav ul .dropdown li a:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
+    margin: 15px; /* Default margin */
 }
+
+.cta-button {
+    margin: 20px !important;
+
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .cta-button {
+        margin: 20px; /* Increase margin for smaller screens */
+        padding: 12px 20px; /* Optionally increase padding for better touch targets */
+    }
+}
+
+.button-container-tool-review {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
 
 .cta-button a:hover {
     background: #e65c00; /* Darker shade for hover effect */
@@ -127,6 +149,7 @@ nav ul .dropdown li a:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .reviews-container div, .blog-container div {
@@ -137,6 +160,10 @@ nav ul .dropdown li a:hover {
     margin: 10px;
     flex: 1 1 300px; /* Responsive flex items */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#latest-blog-posts {
+    padding: 30px 0; /* 30px padding on the top and bottom, 0 on the left and right */
 }
 
 .reviews-container h3, .blog-container h3 {
@@ -160,7 +187,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top:10vh;
+  margin-top:15vh;
 }
 
 .social-icon,
@@ -414,6 +441,21 @@ nav a {
 h1 {
     font-size: 24px; /* Larger font size for the product name */
     margin: 0; /* Remove default margin */
+    margin-left:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+
+.guides-title {justify-content: center;
+text-align: center;
+padding: 20px;
+}
+
+#elaboration-on-steps div {
+    padding: 10px !important; /* Force padding */
+    margin-bottom: 10px !important; /* Force margin */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
 }
 
 p {
@@ -454,6 +496,14 @@ h2 {
 ul {
     list-style-type: disc; /* Default bullet points */
     padding-left: 20px; /* Indent list items */
+}
+
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    margin-bottom: 20px; /* Adjust the value as needed */
 }
 
 footer {
@@ -568,13 +618,6 @@ footer {
     overflow: hidden; /* Hide overflow to create a sliding effect */
 }
 
-.carousel-wrapper {
-    position: relative; /* Ensure buttons are positioned relative to this wrapper */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .carousel {
     display: flex; /* Use flexbox to arrange tools in a row */
     transition: transform 0.5s ease; /* Smooth transition for sliding */
@@ -582,9 +625,34 @@ footer {
 }
 
 .carousel div {
-    min-width: 200px; /* Set a minimum width for each tool block */
+    width: 200px; /* Fixed width for each tool block */
+    height: 200px; /* Fixed height for each tool block */
     margin: 0 10px; /* Space between tool blocks */
     flex-shrink: 0; /* Prevent items from shrinking */
+    display: flex; /* Use flexbox for inner content */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Space out content */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: #f9f9f9; /* Optional: background color for visibility */
+    border: 1px solid #ddd; /* Optional: border for visibility */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.carousel h3 {
+    font-size: 1rem; /* Smaller font size for titles */
+    text-align: center; /* Center the title text */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.carousel img {
+    width: 80%; /* Make image take 80% of the block width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Set a maximum height for images to prevent overflow */
+    object-fit: contain; /* Ensure the image fits within the block without being cut off */
+    border-radius: 5px; /* Rounded corners */
+    display: block; /* Ensure the image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
 }
 
 .carousel-button {
@@ -596,6 +664,8 @@ footer {
     z-index: 1; /* Ensure buttons are above the carousel */
     padding: 10px; /* Padding for buttons */
     position: absolute; /* Position buttons absolutely */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for button height */
 }
 
 .carousel-button.prev {
@@ -605,6 +675,13 @@ footer {
 .carousel-button.next {
     right: 10px; /* Position right button */
 }
+
+
+
+#conclusion {
+    margin-bottom:100px;
+}
+
 
 /* Styles for the tools container */
 .tools-container {

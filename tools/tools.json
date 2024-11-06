@@ -3,84 +3,90 @@
         "title": "Keywords Everywhere",
         "url": "keyword-research/keywords-everywhere-review.html",
         "description": "Turns your browser into a keyword research tool.",
-        "link": "../keyword-research/keywords-everywhere-review.html",
+        "link": "/keyword-research/keywords-everywhere-review.html",
         "image": {
-            "src": "../images/keywords-everywhere-review-logo.png",
+            "src": "/images/keywords-everywhere-review-logo.png",
             "alt": "Keywords Everywhere Logo",
             "width": "140",
             "height": "140"
         },
-        "category": "keyword-research"
+        "category": "keyword-research",
+        "use": "keyword-research"
     },
 
     {
         "title": "BuzzSumo",
         "url": "competitor-analysis/buzz-sumo-review.html",
         "description": "An excellent tool if you need to keep up to date with trends.",
-        "link": "../competitor-analysis/buzz-sumo-review.html",
+        "link": "/competitor-analysis/buzz-sumo-review.html",
         "image": {
-            "src": "../images/buzzsumo-logo.png",
+            "src": "/images/buzzsumo-logo.png",
             "alt": "BuzzSumo Logo",
             "width": "200",
             "height": "88"
         },
-        "category": "competitor-analysis"
+        "category": "competitor-analysis",
+        "use":"competitor-analysis"
     },
 
     {
         "title": "Ahrefs",
         "url": "search-engine-optimization/ahrefs-review.html",
         "description": "Ahrefs is THE tool if you want to do in-depth SEO and get the most data.",
-        "link": "../search-engine-optimization/ahrefs-review.html",
+        "link": "/search-engine-optimization/ahrefs-review.html",
         "image": {
-            "src": "../images/ahrefs-logo.png",
+            "src": "/images/ahrefs-logo.png",
             "alt": "Ahrefs Logo",
             "width": "200",
             "height": "69"
         },
-        "category": "search-engine-optimization"
+        "category": "search-engine-optimization",
+        "use": "analysing-backlinks"
     },
 
     {
         "title": "Semrush",
         "url": "search-engine-optimization/semrush-review.html",
         "description": "Semrush is THE tool if want to do SEO as an agency.",
-        "link": "../search-engine-optimization/semrush-review.html",
+        "link": "/search-engine-optimization/semrush-review.html",
         "image": {
-            "src": "../images/semrush-logo.png",
+            "src": "/images/semrush-logo.png",
             "alt": "Semrush Logo",
             "width": "200",
             "height": "113"
         },
-        "category": "search-engine-optimization"
+        "category": "search-engine-optimization",
+        "uses": ["analysing-backlinks", "outreach-management"]
     },
 
     {
         "title": "SpyFu",
         "url": "ppc-management/spyfu-review.html",
         "description": "An excellent tool for PPC management",
-        "link": "../ppc-management/spyfu-review.html",
+        "link": "/ppc-management/spyfu-review.html",
         "image": {
-            "src": "../images/spyfu-logo.png",
+            "src": "/images/spyfu-logo.png",
             "alt": "SpyFu Logo",
             "width": "200",
             "height": "95"
         },
-        "category": "ppc-management"
+        "category": "ppc-management",
+        "use":"ppc-management"
     },
 
     {
         "title": "GA4",
         "url": "analytics-and-reporting/ga4-review.html",
         "description": "This tool gives you THE most accurate data about your website.",
-        "link": "../analytics-and-reporting/ga4-review.html",
+        "link": "/analytics-and-reporting/ga4-review.html",
         "image": {
-            "src": "../images/ga4-logo.png",
+            "src": "/images/ga4-logo.png",
             "alt": "GA4 Logo",
             "width": "200",
             "height": "69"
         },
-        "categories": ["analytics-and-reporting", "free-tools"]
+        "categories": ["analytics-and-reporting", "free-tools"],
+        "use":"data-analysis"
     },
 
     {
