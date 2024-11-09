@@ -828,5 +828,58 @@ footer {
     }
 }
 
+/* General styles for the contact section */
+#contact {
+    max-width: 800px; /* Set a maximum width for the contact section */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px; /* Add padding around the section */
+}
+
+/* Style for the form elements */
+form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Add space between form elements */
+    margin: 20px 0; /* Add margin above and below the form */
+}
+
+/* Style for labels and inputs */
+label {
+    font-weight: bold; /* Make labels bold */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px; /* Add padding inside input fields */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Round the corners */
+    width: 100%; /* Make inputs full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+button {
+    padding: 10px 15px; /* Add padding to the button */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Style for contact information */
+h3 {
+    margin-top: 30px; /* Add margin above the contact information */
+}
+
+p {
+    margin: 10px 0; /* Add margin above and below paragraphs */
+}
+
 
 

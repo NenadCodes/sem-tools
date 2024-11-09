@@ -50,12 +50,12 @@
         </nav>
     </header>
 
-
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feedback, or inquiries, feel free to reach out using the form below or through the contact information provided.</p>
+        <h2>Contact Me</h2>
+        <p>If you have any questions, feedback, or inquiries, feel free to reach out using the form below or through the contact information provided. Cheers!</p>
 
-        <form id="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <form id="contact-form" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" /> <!-- Hidden input for Netlify -->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -69,8 +69,8 @@
         </form>
 
         <h3>Contact Information</h3>
-        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        <p>Phone: (123) 456-7890</p>
+        <p>Email: <a href="mailto:nenad.markovic1408@gmail.com">nenad.markovic1408@gmail.com</a></p>
+        <p>Phone: +381603555075</p>
     </section>
 
     <footer class="footer">
