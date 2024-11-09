@@ -30,6 +30,7 @@ header {
     justify-content: space-between;
     align-items: center;
     position: relative; /* Ensure positioning for the toggle button */
+    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
 }
 
 /* Center the nav */
@@ -39,8 +40,15 @@ nav {
 }
 
 header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
+margin: 0 !important;
+padding-left: 10px !important;
+}
+
+.logo img{
+    max-width: 250px; /* Set a maximum width for the logo */
+    min-width: 150px; /* Set a minimum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    transition: max-width 0.3s; /* Smooth transition for resizing */
 }
 
 nav ul {
@@ -295,9 +303,8 @@ h2 {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     header {
-        flex-direction: column;
         align-items: flex-start;
     }
 
@@ -404,7 +411,7 @@ nav a {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     nav {
         display: none; /* Hide the nav by default */
         flex-direction: column; /* Stack items vertically */
