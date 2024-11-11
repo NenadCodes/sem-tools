@@ -17,7 +17,9 @@
 <body>
     <header>
         <div class="logo">
-            <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" width="182" height="57" style="max-width: 100%; height: auto;" />
+            <a href="/index.html"> <!-- Link to the homepage -->
+                <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" width="182" height="57" style="max-width: 100%; height: auto;" />
+            </a>
         </div>
         <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button> <!-- Hamburger icon -->
         <nav>
@@ -25,8 +27,9 @@
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/reviews.html">Reviews</a></li>
                 <li>
-                    <a href="/all-tools.html">Tools</a>
+                    <a href="#" onclick="event.preventDefault();">Tools</a>
                     <ul class="dropdown">
+                        <li><a href="/all-tools.html">All Tools</a></li>
                         <li><a href="/search-engine-optimization/index.html">SEO</a></li>
                         <li><a href="/analytics-and-reporting/index.html">Analytics and Reporting</a></li>
                         <li><a href="/competitor-analysis/index.html">Competitor Analysis</a></li>
@@ -37,8 +40,9 @@
                     </ul>
                 </li>
                 <li>
-                <a href="/guides.html">Guides</a>
+                <a href="#" onclick="event.preventDefault();">Guides</a>
                 <ul class="dropdown">
+                    <li><a href="/guides.html">All Guides</a></li>
                     <li><a href="/guides/backlinks/index.html">Backlinks</a></li>
                     <li><a href="/guides/competitor-analysis/index.html">Competitor Analysis</a></li>
                     <li><a href="/guides/data-analysis/index.html">Data Analysis</a></li>

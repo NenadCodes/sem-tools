@@ -43,9 +43,8 @@ const loadBlogPosts = async () => {
         data.forEach(post => {
             const postBlock = document.createElement('div');
             postBlock.innerHTML = `
-                <h3>${post.title}</h3>
+                <h3><a href="${post.link}">${post.title}</a></h3> <!-- Make the title clickable -->
                 <p>${post.excerpt}</p>
-                <a href="${post.link}">Read More</a>
             `;
             blogContainer.appendChild(postBlock);
         });
