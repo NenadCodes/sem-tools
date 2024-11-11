@@ -1,0 +1,75 @@
+/* Critical CSS for Initial Rendering */
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Serif', serif; /* Set Roboto Serif for the entire body */
+    line-height: 1.6;
+    color: #333; /* Dark gray for text for better readability */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Header Styles */
+header {
+    background: #1F3B73; /* Deep Blue */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    flex: 1; /* Allow nav to take available space */
+    text-align: center; /* Center the nav items */
+}
+
+header .logo img {
+    max-width: 250px; /* Set a maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Hero Section Styles */
+#hero {
+    background: #4AB7FF; /* Sky Blue */
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+#hero p {
+    font-size: 1.2em;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center; /* Centered footer text */
+    margin-top: 20px; /* Space above footer */
+    font-size: 14px; /* Smaller font size for footer */
+    color: #666; /* Lighter color for footer text */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px; /* Add padding to the button */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

@@ -5,7 +5,10 @@
     padding: 0;
     box-sizing: border-box;
   }
-
+/* styles.css */
+html {
+    overflow-y: scroll; /* Always show vertical scrollbar */
+}
 
 body {
     font-family: 'Roboto Serif', serif; /* Set Roboto Serif for the entire body */
@@ -78,7 +81,7 @@ nav ul .dropdown {
     position: absolute; /* Position it absolutely */
     background-color: #1F3B73; /* Match the header background */
     min-width: 160px; /* Set a minimum width */
-    z-index: 1; /* Ensure it appears above other content */
+    z-index: 1000; /* Ensure it appears above other content */
 }
 
 nav ul li:hover .dropdown {
@@ -195,7 +198,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top:15vh;
+  margin-top:15vh !important;
 }
 
 .social-icon,
@@ -257,28 +260,28 @@ h2 {
 }
 
 .wave#wave1 {
-  z-index: 1000;
+  z-index: 800;
   opacity: 1;
   bottom: 0;
   animation: animateWaves 4s linear infinite;
 }
 
 .wave#wave2 {
-  z-index: 999;
+  z-index: 799;
   opacity: 0.5;
   bottom: 10px;
   animation: animate 4s linear infinite !important;
 }
 
 .wave#wave3 {
-  z-index: 1000;
+  z-index: 800;
   opacity: 0.2;
   bottom: 15px;
   animation: animateWaves 3s linear infinite;
 }
 
 .wave#wave4 {
-  z-index: 999;
+  z-index: 799;
   opacity: 0.7;
   bottom: 20px;
   animation: animate 3s linear infinite;

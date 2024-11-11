@@ -1,18 +1,22 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Serif:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css"> <!-- Adjust path as necessary -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Serif:wght@400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Serif:wght@400&display=swap"></noscript>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preload" href="/images/sem-tools-logo.png" as="image"> <!-- Preload logo image -->
+    <link rel="preload" href="/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/critical.css"></noscript>
+    <link rel="icon" href="/images/sem-tools-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/sem-tools-favicon.png" type="image/x-icon">
     <title>Google Analytics 4 Review</title>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" style="max-width: 50%; height: auto;" />
+            <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" width="182" height="57" style="max-width: 100%; height: auto;" />
         </div>
         <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button> <!-- Hamburger icon -->
         <nav>
@@ -196,5 +200,27 @@
     <script src="../scripts/common.js"></script>
     <script src="../scripts/accordion.js"></script> 
     <script src="../scripts/similar-tools.js"></script> 
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Google Analytics 4",
+          "image": "https://www.sem-tools.com/images/ga4-logo.png",
+          "description": "Google Analytics 4 (GA4) is the latest version of Google Analytics, designed to provide a more comprehensive understanding of user interactions across websites and apps.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Google"
+          },
+          "review": {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Nenad Markovic" 
+            },
+            "datePublished": "2024-01-01",  
+            "reviewBody": "Google Analytics 4 provides excellent insights into user behavior and is a significant improvement over Universal Analytics."
+          }
+        }
+        </script>
 </body>
 </html>

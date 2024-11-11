@@ -17,7 +17,7 @@ const loadReviews = async () => {
                     <div style="position: relative; width: 100%; padding-bottom: 56.25%; /* 16:9 Aspect Ratio */">
                         <iframe 
                             src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
-                            frameborder="0" 
+                            frameborder="1" 
                             allowfullscreen 
                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                         </iframe>

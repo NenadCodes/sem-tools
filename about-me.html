@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about the creator of SEM Tools and the mission behind this website.">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Serif:wght@400&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Serif:wght@400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Serif:wght@400&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="/images/sem-tools-logo.png" as="image"> <!-- Preload logo image -->
+    <link rel="preload" href="/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/critical.css"></noscript>
+    <link rel="icon" href="/images/sem-tools-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/sem-tools-favicon.png" type="image/x-icon">
     <title>About Me | SEM-Tools</title>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" style="max-width: 50%; height: auto;" />
+            <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" width="182" height="57" style="max-width: 100%; height: auto;" />
         </div>
         <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button> <!-- Hamburger icon -->
         <nav>
@@ -54,30 +59,30 @@
     <section id="about-me">
         <h2>About Me</h2>
         <div class="about-content">
-            <img src="images/nenad-markovic-profile.png" alt="Nenad Markovic" class="profile-image"> <!-- Replace with your image path -->
+            <img src="/images/nenad-markovic-profile.png" alt="Nenad Markovic" class="profile-image"> <!-- Replace with your image path -->
             <div class="intro-text">
-                <p>Hello! My name is [Your Name], and I am passionate about digital marketing and search engine marketing (SEM). I created this website to share my insights, reviews, and resources to help others navigate the world of SEM tools.</p>
-                <p>With years of experience in the industry, I understand the challenges that marketers face when trying to find the right tools to enhance their campaigns. My goal is to provide honest reviews and practical advice to help you make informed decisions.</p>
-                <p>Thank you for visiting SEM Tools! I hope you find the information here valuable and helpful in your digital marketing journey.</p>
+                <p>Hello! My name is <a href="https://nenadmarkovic.tech" target="_blank" rel="noopener noreferrer">Nenad Markovic</a>, and I am here to show you how to choose your ideal SEM toolkit and make the most of it. </p>
+                <p>I love being efficent with my SEM tasks, so I am sharing my workflow tips and tricks with the SEM community.</p>
+                <p>Thank you for visiting SEM-Tools.com! I hope you find the information here valuable and helpful in your day-to-day work.</p>
             </div>
         </div>
-
+<h2>Here's What I Do</h2>
         <div class="cards-container">
             <div class="card">
                 <h3>SEO</h3>
-                <p>Learn about search engine optimization strategies and tools.</p>
+                <p>This is my primary skill, I spend most of my time working on SEO projects. Doing SEO is also my dayjob.</p>
             </div>
             <div class="card">
                 <h3>PPC</h3>
-                <p>Discover pay-per-click advertising techniques and tools.</p>
+                <p>I got into the world of SEM through Google Ads. PPC ads are pretty awesome if you ask me, it's a money-printing machine if done right.</p>
             </div>
             <div class="card">
                 <h3>Web Development</h3>
-                <p>Explore web development resources and best practices.</p>
+                <p>I build all my websites by myself, and occasionaly do it for clients. I suck at design, but luckily I got some help in that department.</p>
             </div>
             <div class="card">
                 <h3>Workflows</h3>
-                <p>Explore web development resources and best practices.</p>
+                <p>There's nothing I love more than a smooth workflow. I majored in Automation, jumped to digital makreting, and here I am.</p>
             </div>
         </div>
     </section>
@@ -114,5 +119,29 @@
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script src="scripts/common.js"></script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "SEM-Tools.com",
+          "url": "https://www.sem-tools.com",
+          "logo": "https://www.sem-tools.com/images/sem-tools-logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+381603555075",
+            "email": "nenad.markovic1408@gmail.com",
+            "contactType": "Customer Service",
+            "areaServed": "Worldwide",
+            "availableLanguage": "English"
+          },
+          "sameAs": [
+            "https://github.com/NenadCodes",
+            "https://x.com/SEMtoolsReview",
+            "https://www.linkedin.com/in/nenad-markovic1408/",
+            "https://www.reddit.com/user/SEO-Samaritan/"
+            "https://nenadmarkovic.tech/"
+          ]
+        }
+        </script>
 </body>
 </html>
