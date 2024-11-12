@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Honest reviews and recommendations of SEM tools that boost your workflow."> 
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Serif:wght@400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Serif:wght@400&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
     <link rel="preload" href="/images/sem-tools-logo.png" as="image"> <!-- Preload logo image -->
     <link rel="preload" href="/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -17,11 +15,11 @@
 <body>
     <header>
         <div class="logo">
-            <a href="/index.html"> <!-- Link to the homepage -->
+            <a href="/index.html"> 
                 <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" width="182" height="57" style="max-width: 100%; height: auto;" />
             </a>
         </div>
-        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button> <!-- Hamburger icon -->
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button> 
         <nav>
             <ul>
                 <li><a href="/index.html">Home</a></li>
@@ -60,25 +58,25 @@
         </nav>
     </header>
 
-    <section id="hero">
+    <section id="hero" style="min-height: 25vh;">
         <h1>The Best SEM Tools Reviewed and Tested by an Average User </h1>
         <p>Honest reviews and recommendations of SEM tools that boost your workflow.</p>
     </section>
         <!-- New Featured Tools Section -->
-        <section id="featured-tools">
+        <section id="featured-tools" style="min-height: 75vh;">
             <h2>Featured Tools</h2>
             <div class="tools-container">
                 <!-- Tools will be dynamically loaded here -->
             </div>
         </section>
-    <section id="featured-reviews">
+    <section id="featured-reviews" style="min-height: 50vh;">
         <h2>Featured Reviews</h2>
         <div class="reviews-container">
             <!-- Reviews will be dynamically loaded here -->
         </div>
     </section>
 
-    <section id="latest-blog-posts">
+    <section id="latest-blog-posts" style="min-height: 50vh;">
         <h2>Latest Insights in SEM</h2>
         <div class="blog-container">
             <!-- Blog posts will be dynamically loaded here -->
@@ -87,37 +85,43 @@
 
     <footer class="footer">
         <div class="waves">
-          <div class="wave" id="wave1"></div>
-          <div class="wave" id="wave2"></div>
-          <div class="wave" id="wave3"></div>
-          <div class="wave" id="wave4"></div>
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
         </div>
         <ul class="social-icon">
-          <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/NenadCodes">
-              <ion-icon name="logo-github"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="https://x.com/SEMtoolsReview">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/nenad-markovic1408/">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="https://www.reddit.com/user/SEO-Samaritan/">
-              <ion-icon name="logo-reddit"></ion-icon>
-            </a></li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://github.com/NenadCodes">
+                    <img src="/icons/logo-github.svg" alt="GitHub" width="24" height="24"/>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://x.com/SEMtoolsReview">
+                    <img src="/icons/logo-twitter.svg" alt="Twitter" width="24" height="24"/>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.linkedin.com/in/nenad-markovic1408/">
+                    <img src="/icons/logo-linkedin.svg" alt="LinkedIn" width="24" height="24"/>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.reddit.com/user/SEO-Samaritan/">
+                    <img src="/icons/logo-reddit.svg" alt="Reddit" width="24" height="24"/>
+                </a>
+            </li>
         </ul>
         <ul class="menu">
-          <li class="menu__item"><a class="menu__link" href="/index.html">Home</a></li>
-          <li class="menu__item"><a class="menu__link" href="/about-me.html">About</a></li>
-          <li class="menu__item"><a class="menu__link" href="/contact.html">Contact</a></li>    
+            <li class="menu__item"><a class="menu__link" href="/index.html">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="/about-me.html">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="/contact.html">Contact</a></li>
         </ul>
         <p>&copy;2024 SEM-Tools. All rights reserved.</p>
-      </footer>
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </footer>
 
-    <script src="scripts/homepage.js" defer></script>
-    <script src="scripts/common.js" defer></script>
+    <script src="scripts/homepage.js"></script>
+    <script src="scripts/common.js"></script>
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",

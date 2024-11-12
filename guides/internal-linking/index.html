@@ -16,16 +16,19 @@
 <body>
     <header>
         <div class="logo">
-            <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" width="182" height="57" style="max-width: 100%; height: auto;" />
+            <a href="/index.html"> 
+                <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" width="182" height="57" style="max-width: 100%; height: auto;" />
+            </a>
         </div>
-        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button> <!-- Hamburger icon -->
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button> 
         <nav>
             <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/reviews.html">Reviews</a></li>
                 <li>
-                    <a href="/all-tools.html">Tools</a>
+                    <a href="#" onclick="event.preventDefault();">Tools</a>
                     <ul class="dropdown">
+                        <li><a href="/all-tools.html">All Tools</a></li>
                         <li><a href="/search-engine-optimization/index.html">SEO</a></li>
                         <li><a href="/analytics-and-reporting/index.html">Analytics and Reporting</a></li>
                         <li><a href="/competitor-analysis/index.html">Competitor Analysis</a></li>
@@ -36,8 +39,9 @@
                     </ul>
                 </li>
                 <li>
-                <a href="/guides.html">Guides</a>
+                <a href="#" onclick="event.preventDefault();">Guides</a>
                 <ul class="dropdown">
+                    <li><a href="/guides.html">All Guides</a></li>
                     <li><a href="/guides/backlinks/index.html">Backlinks</a></li>
                     <li><a href="/guides/competitor-analysis/index.html">Competitor Analysis</a></li>
                     <li><a href="/guides/data-analysis/index.html">Data Analysis</a></li>
@@ -54,7 +58,7 @@
             </ul>
         </nav>
     </header>
-
+    <div class="cls-placeholder" style="min-height: 800px;">
     <section id="internal-linking-guides">
         <h2>Internal Linking Guides</h2>
         <p>Learn how to build effective backlinks to improve your SEO.</p>
@@ -62,9 +66,42 @@
             <!-- Guides will be dynamically loaded here -->
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2024 SEM Tool Reviews. All rights reserved.</p>
+</div>
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://github.com/NenadCodes">
+                    <img src="/icons/logo-github.svg" alt="GitHub" width="24" height="24"/>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://x.com/SEMtoolsReview">
+                    <img src="/icons/logo-twitter.svg" alt="Twitter" width="24" height="24"/>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.linkedin.com/in/nenad-markovic1408/">
+                    <img src="/icons/logo-linkedin.svg" alt="LinkedIn" width="24" height="24"/>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.reddit.com/user/SEO-Samaritan/">
+                    <img src="/icons/logo-reddit.svg" alt="Reddit" width="24" height="24"/>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="/index.html">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="/about-me.html">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="/contact.html">Contact</a></li>
+        </ul>
+        <p>&copy;2024 SEM-Tools. All rights reserved.</p>
     </footer>
 
     <script src="../../scripts/guides-by-category.js"></script>

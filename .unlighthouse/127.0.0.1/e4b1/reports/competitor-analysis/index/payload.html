@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Serif:wght@400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Serif:wght@400&display=swap"></noscript>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preload" href="/images/sem-tools-logo.png" as="image"> <!-- Preload logo image -->
+    <link rel="preload" href="/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/critical.css"></noscript>
+    <link rel="icon" href="/images/sem-tools-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/sem-tools-favicon.png" type="image/x-icon">
+    <title>Competitor Analysis Tools | SEM-Tools</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html"> 
+                <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" width="182" height="57" style="max-width: 100%; height: auto;" />
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button> 
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/reviews.html">Reviews</a></li>
+                <li>
+                    <a href="#" onclick="event.preventDefault();">Tools</a>
+                    <ul class="dropdown">
+                        <li><a href="/all-tools.html">All Tools</a></li>
+                        <li><a href="/search-engine-optimization/index.html">SEO</a></li>
+                        <li><a href="/analytics-and-reporting/index.html">Analytics and Reporting</a></li>
+                        <li><a href="/competitor-analysis/index.html">Competitor Analysis</a></li>
+                        <li><a href="/keyword-research/index.html">Keyword Research</a></li>
+                        <li><a href="/ppc-management/index.html">PPC Management</a></li>
+                        <li><a href="/free-tools/index.html">Free Tools</a></li>
+                        <li><a href="/free-scripts/index.html">Free Scripts</a></li>
+                    </ul>
+                </li>
+                <li>
+                <a href="#" onclick="event.preventDefault();">Guides</a>
+                <ul class="dropdown">
+                    <li><a href="/guides.html">All Guides</a></li>
+                    <li><a href="/guides/backlinks/index.html">Backlinks</a></li>
+                    <li><a href="/guides/competitor-analysis/index.html">Competitor Analysis</a></li>
+                    <li><a href="/guides/data-analysis/index.html">Data Analysis</a></li>
+                    <li><a href="/guides/internal-linking/index.html">Internal Linking</a></li>
+                    <li><a href="/guides/keyword-research/index.html">Keyword Research</a></li>
+                    <li><a href="/guides/on-page-optimization/index.html">On-Page Optimization</a></li>
+                    <li><a href="/guides/technical-seo/index.html">Technical SEO</a></li>
+                    <li><a href="/guides/website-audit/index.html">Website Audit</a></li>
+                </ul>
+            </li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/about-me.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="competitor-analysis-tools">
+        <h2>Competitor Analysis Tools</h2>
+        <div class="tools-container">
+            <!-- Tools will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://github.com/NenadCodes">
+                    <img src="/icons/logo-github.svg" alt="GitHub" width="24" height="24"/>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://x.com/SEMtoolsReview">
+                    <img src="/icons/logo-twitter.svg" alt="Twitter" width="24" height="24"/>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.linkedin.com/in/nenad-markovic1408/">
+                    <img src="/icons/logo-linkedin.svg" alt="LinkedIn" width="24" height="24"/>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.reddit.com/user/SEO-Samaritan/">
+                    <img src="/icons/logo-reddit.svg" alt="Reddit" width="24" height="24"/>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="/index.html">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="/about-me.html">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="/contact.html">Contact</a></li>
+        </ul>
+        <p>&copy;2024 SEM-Tools. All rights reserved.</p>
+    </footer>
+
+    <script src="../scripts/tools-by-category.js"></script>
+    <script src="../scripts/common.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

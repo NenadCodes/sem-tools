@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Roboto Serif', serif; /* Set Roboto Serif for the entire body */
+    font-family: 'Roboto', Arial, sans-serif; /* Set Roboto with fallbacks for the entire body */
     line-height: 1.6;
     color: #333; /* Dark gray for text for better readability */
     background-color: #f9f9f9; /* Light background for contrast */
@@ -73,3 +73,161 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker shade on hover */
 }
+
+#all-tools {
+    min-height:100vh;
+}
+
+#featured-reviews {
+    padding: 20px; /* Add padding around the section */
+    min-height:80vh;
+}
+
+
+.video-container {
+    position: relative; /* Position relative for absolute positioning of the iframe */
+    width: 100%; /* Full width of the parent */
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+    overflow: hidden; /* Hide overflow to prevent layout shifts */
+}
+
+.video-container iframe {
+    position: absolute; /* Position absolutely within the container */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    border: none; /* Remove border */
+}
+
+
+.featured-reviews {
+    min-height:100vh !important;
+}
+
+.featured-tools {
+    min-height:100vh !important;
+}
+
+.latest-blog-posts {
+    min-height:50vh !important;
+}
+
+/* Footer Styles */
+.footer {
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top:15vh !important;
+  }
+  
+  .social-icon,
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .social-icon__item,
+  .menu__item {
+    list-style: none;
+  }
+  
+ .social-icon__link img {
+    width: 24px; /* Set a fixed width for the icons */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between icons */
+    transition: transform 0.3s; /* Optional: add a hover effect */
+}
+
+.social-icon__link:hover img {
+    transform: scale(1.2); /* Optional: scale up on hover */
+    transform: translateY(-10px);
+}
+  
+  .menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+  }
+  
+  .menu__link:hover {
+    opacity: 1;
+  }
+  
+  .footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
+  }
+  
+  .wave#wave1 {
+    z-index: 800;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+  }
+  
+  .wave#wave2 {
+    z-index: 799;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+  }
+  
+  .wave#wave3 {
+    z-index: 800;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+  }
+  
+  .wave#wave4 {
+    z-index: 799;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+  }
+  
+  @keyframes animateWaves {
+    0% {
+      background-position-x: 1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position-x: -1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
