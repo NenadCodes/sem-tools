@@ -1,7 +1,7 @@
 // Function to load reviews from JSON
 const loadReviews = async () => {
     try {
-        const response = await fetch('reviews/reviews.json');
+        const response = await fetch('/reviews/reviews.json');
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         const reviewsContainer = document.querySelector('.reviews-container');

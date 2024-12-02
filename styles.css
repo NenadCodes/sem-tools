@@ -14,13 +14,16 @@ body {
     line-height:1.6; 
 }
 
-h1, h2, h3 {
+#main-content h1,
+#main-content h2,
+#main-content h3 {
     margin-top: 1.5em !important;
     margin-bottom: 0.5em !important;
-  }
+}
   
   p {
     margin-bottom: 1.2em !important; /* Space between paragraphs for readability */
+    margin-left: 1em !important;
   }
 
 #hero h1,
@@ -85,6 +88,7 @@ nav {
 html {
     overflow-y: scroll;
 }
+
 
 @font-face {
     font-family: Roboto;
@@ -226,6 +230,7 @@ nav ul .dropdown li a:hover {
     justify-content: space-around;
     padding: 20px;
     margin-bottom: 20px;
+    border: 1px;
 }
 
 #all-blog-posts {

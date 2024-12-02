@@ -90,12 +90,12 @@
     },
 
     {
-        "title": "Script Tool 1",
-        "description": "A brief description of Script Tool 1.",
-        "link": "https://example.com/script-tool1",
+        "title": "Internal Links Script v1",
+        "description": "A script for visualisation of internal links and planning of new links.",
+        "link": "/free-scripts/internal-linking-script.html",
         "image": {
             "src": "../images/script-logo.png",
-            "alt": "Script Tool 1 Logo",
+            "alt": "JS Script",
             "width": "200",
             "height": "203"
         },
