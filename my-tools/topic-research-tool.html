@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PHHXPXHG');</script>
+    <!-- End Google Tag Manager -->
+     
+     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Honest reviews and recommendations of SEM tools that boost your workflow."> 
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preload" href="/images/sem-tools-logo.png" as="image"> <!-- Preload logo image -->
+    <link rel="preload" href="/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/critical.css"></noscript>
+    <link rel="icon" href="/images/sem-tools-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/sem-tools-favicon.png" type="image/x-icon">
+    <title>Topic Research Tool | SEM-Tools </title>
+    <style>
+        .cta-button {
+            width: 25%; /* Set button width to 25% */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 2px solid #ddd; /* Stronger borders */
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .headings-content {
+            display: none; /* Collapsed by default */
+            max-height: 100px; /* Set a max height for the headings */
+            overflow-y: auto; /* Add a scrollbar if content exceeds max height */
+            padding-left: 20px; /* Indent for better visibility */
+        }
+        .expandable {
+            cursor: pointer; /* Change cursor to indicate clickable */
+            color: blue; /* Optional: Change color to indicate it's clickable */
+            text-decoration: underline; /* Optional: Underline to indicate it's clickable */
+        }
+        #loading {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHHXPXHG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <div class="logo">
+            <a href="/index.html"> 
+                <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" width="182" height="57" style="max-width: 100%; height: auto;" />
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button> 
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/reviews.html">Reviews</a></li>
+                <li>
+                    <a href="#" onclick="event.preventDefault();">Tools</a>
+                    <ul class="dropdown">
+                        <li><a href="/all-tools.html">All Tools</a></li>
+                        <li><a href="/search-engine-optimization/index.html">SEO</a></li>
+                        <li><a href="/analytics-and-reporting/index.html">Analytics and Reporting</a></li>
+                        <li><a href="/competitor-analysis/index.html">Competitor Analysis</a></li>
+                        <li><a href="/keyword-research/index.html">Keyword Research</a></li>
+                        <li><a href="/ppc-management/index.html">PPC Management</a></li>
+                        <li><a href="/free-tools/index.html">Free Tools</a></li>
+                        <li><a href="/free-scripts/index.html">Free Scripts</a></li>
+                    </ul>
+                </li>
+                <li>
+                <a href="#" onclick="event.preventDefault();">Guides</a>
+                <ul class="dropdown">
+                    <li><a href="/guides.html">All Guides</a></li>
+                    <li><a href="/guides/backlinks/index.html">Backlinks</a></li>
+                    <li><a href="/guides/competitor-analysis/index.html">Competitor Analysis</a></li>
+                    <li><a href="/guides/data-analysis/index.html">Data Analysis</a></li>
+                    <li><a href="/guides/internal-linking/index.html">Internal Linking</a></li>
+                    <li><a href="/guides/keyword-research/index.html">Keyword Research</a></li>
+                    <li><a href="/guides/on-page-optimization/index.html">On-Page Optimization</a></li>
+                    <li><a href="/guides/technical-seo/index.html">Technical SEO</a></li>
+                    <li><a href="/guides/website-audit/index.html">Website Audit</a></li>
+                </ul>
+            </li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/about-me.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+    <h1>Topic Research Tool</h1>
+    <form id="keywordForm">
+        <input type="text" id="keywords" placeholder="Enter keywords separated by commas" required>
+        <button class="cta-button" type="submit">Scrape</button>
+    </form>
+    <button id="downloadCsv" style="display:none; padding-bottom:10px;">Download CSV</button>
+
+    <h2 style="padding-top:20px";>Results</h2>
+    <table id="results" style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>URL</th>
+                <th>Headings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Results will be populated here -->
+        </tbody>
+    </table>
+
+    <div id="loading">Loading, please wait...</div>
+
+    </section>
+
+    <script>
+        document.getElementById('keywordForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const keywords = document.getElementById('keywords').value;
+
+            // Show the loading indicator
+            document.getElementById('loading').style.display = 'block';
+
+            // Send a request to the server to run the scraper
+            const response = await fetch('http://localhost:5501/Scrape', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ keywords })
+            });
+
+            const result = await response.json();
+            console.log('Server response:', result); // Log the entire response
+
+            // Hide the loading indicator
+            document.getElementById('loading').style.display = 'none';
+
+            // Check if result.csvData exists
+            if (result.csvData) {
+                // Show the Download CSV button and set its functionality
+                document.getElementById('downloadCsv').style.display = 'block';
+                document.getElementById('downloadCsv').onclick = function() {
+                    const csvData = result.csvData; // Assuming the server returns CSV data
+                    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'results.csv';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                };
+
+                // Display the results in the table
+                const resultsTableBody = document.getElementById('results').querySelector('tbody');
+                resultsTableBody.innerHTML = ''; // Clear previous results
+                result.data.forEach(item => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${item.Title}</td>
+                        <td>${item.URL}</td>
+                        <td class="expandable">Show Headings (${item.Headings.split('\n').length})</td> <!-- Show number of headings -->
+                    `;
+                    resultsTableBody.appendChild(tr);
+
+                    // Create a new row for the headings content
+                    const headingsRow = document.createElement('tr');
+                    headingsRow.classList.add('headings-content');
+                    headingsRow.innerHTML = `
+                        <td colspan="3">${item.Headings.replace(/\n/g, '<br>')}</td> <!-- Collapsible content -->
+                    `;
+                    resultsTableBody.appendChild(headingsRow);
+
+                    // Add click event to toggle headings
+                    tr.querySelector('.expandable').addEventListener('click', function() {
+                        const isVisible = headingsRow.style.display === 'table-row';
+                        headingsRow.style.display = isVisible ? 'none' : 'table-row'; // Toggle visibility
+                        this.textContent = isVisible ? `Show Headings (${item.Headings.split('\n').length})` : `Hide Headings`;
+                    });
+                });
+            } else {
+                console.error('CSV data not found in the response:', result);
+                // Optionally, display an error message to the user
+            }
+        });
+    </script>
+</body>
+</html>
