@@ -138,7 +138,7 @@
             document.getElementById('loading').style.display = 'block';
 
             // Send a request to the server to run the scraper
-            const response = await fetch('/.netlify/functions/scrape', {
+            const response = await fetch('/netlify/functions/scrape', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
