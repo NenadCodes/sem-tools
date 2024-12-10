@@ -107,105 +107,37 @@
     <h1>Topic Research Tool</h1>
     <form id="keywordForm">
         <input type="text" id="keywords" placeholder="Enter keywords separated by commas" required>
-        <button class="cta-button" type="submit">Scrape</button>
+        <button id="scrapeBtn" class="cta-button" type="submit">Scrape</button>
     </form>
     <button id="downloadCsv" style="display:none; padding-bottom:10px;">Download CSV</button>
 
     <h2 style="padding-top:20px";>Results</h2>
-    <table id="results" style="margin-top: 20px;">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>URL</th>
-                <th>Headings</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Results will be populated here -->
-        </tbody>
-    </table>
-
-    <div id="loading">Loading, please wait...</div>
-
-    </section>
+    <div id="results"></div>
 
     <script>
-        document.getElementById('keywordForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-            const keywords = document.getElementById('keywords').value;
-
-            // Show the loading indicator
-            document.getElementById('loading').style.display = 'block';
-
-            // Send a request to the server to run the scraper
+        document.getElementById('scrapeBtn').addEventListener('click', async () => {
+            const query = document.getElementById('query').value;
             const response = await fetch('/.netlify/functions/scrape', {
-       method: 'POST',
-       headers: {
-           'Content-Type': 'application/json',
-       },
-       body: JSON.stringify({ keywords: 'your keywords', numResults: 10 }),
-   });
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ query }),
+            });
 
-   const result = await response.json();
-   console.log('Server response:', result); // Log the entire response
+            const results = await response.json();
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
 
-   if (result.csvData) {
-       // Handle CSV data
-       const csvData = result.csvData;
-       // Your logic to handle CSV data
-   } else {
-       console.error('CSV data not found in the response:', result);
-   }
-
-            // Hide the loading indicator
-            document.getElementById('loading').style.display = 'none';
-
-            // Check if result.csvData exists
-            if (result.csvData) {
-                // Show the Download CSV button and set its functionality
-                document.getElementById('downloadCsv').style.display = 'block';
-                document.getElementById('downloadCsv').onclick = function() {
-                    const csvData = result.csvData; // Assuming the server returns CSV data
-                    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = 'results.csv';
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                };
-
-                // Display the results in the table
-                const resultsTableBody = document.getElementById('results').querySelector('tbody');
-                resultsTableBody.innerHTML = ''; // Clear previous results
-                result.data.forEach(item => {
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `
-                        <td>${item.Title}</td>
-                        <td>${item.URL}</td>
-                        <td class="expandable">Show Headings (${item.Headings.split('\n').length})</td> <!-- Show number of headings -->
-                    `;
-                    resultsTableBody.appendChild(tr);
-
-                    // Create a new row for the headings content
-                    const headingsRow = document.createElement('tr');
-                    headingsRow.classList.add('headings-content');
-                    headingsRow.innerHTML = `
-                        <td colspan="3">${item.Headings.replace(/\n/g, '<br>')}</td> <!-- Collapsible content -->
-                    `;
-                    resultsTableBody.appendChild(headingsRow);
-
-                    // Add click event to toggle headings
-                    tr.querySelector('.expandable').addEventListener('click', function() {
-                        const isVisible = headingsRow.style.display === 'table-row';
-                        headingsRow.style.display = isVisible ? 'none' : 'table-row'; // Toggle visibility
-                        this.textContent = isVisible ? `Show Headings (${item.Headings.split('\n').length})` : `Hide Headings`;
-                    });
+            if (Array.isArray(results)) {
+                results.forEach(result => {
+                    const div = document.createElement('div');
+                    div.className = 'result';
+                    div.innerHTML = `<a href="${result.url}" target="_blank">${result.title}</a>`;
+                    resultsDiv.appendChild(div);
                 });
             } else {
-                console.error('CSV data not found in the response:', result);
-                // Optionally, display an error message to the user
+                resultsDiv.innerHTML = `<p>Error: ${results.error}</p>`;
             }
         });
     </script>
