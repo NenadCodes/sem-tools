@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname))); // Serve static files from the current directory
 
-async function getGoogleSearchResults(query, numResults = 3) {
+async function getGoogleSearchResults(query, numResults = 10) {
     console.log(`Searching for: ${query}`); // Debugging line
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -61,7 +61,7 @@ app.post('/scrape', async (req, res) => {
 
     for (const keyword of keywords) {
         console.log(`Processing keyword: ${keyword}`); // Debugging line
-        const urls = await getGoogleSearchResults(keyword, 3);
+        const urls = await getGoogleSearchResults(keyword, 10);
         for (const url of urls) {
             const { title, headings } = await extractData(url);
             results.push({ URL: url, Title: title, Headings: headings });
