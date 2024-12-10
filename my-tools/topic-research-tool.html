@@ -138,16 +138,24 @@
             document.getElementById('loading').style.display = 'block';
 
             // Send a request to the server to run the scraper
-            const response = await fetch('/netlify/functions/scrape', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ keywords })
-            });
+            const response = await fetch('/.netlify/functions/scrape', {
+       method: 'POST',
+       headers: {
+           'Content-Type': 'application/json',
+       },
+       body: JSON.stringify({ keywords: 'your keywords', numResults: 10 }),
+   });
 
-            const result = await response.json();
-            console.log('Server response:', result); // Log the entire response
+   const result = await response.json();
+   console.log('Server response:', result); // Log the entire response
+
+   if (result.csvData) {
+       // Handle CSV data
+       const csvData = result.csvData;
+       // Your logic to handle CSV data
+   } else {
+       console.error('CSV data not found in the response:', result);
+   }
 
             // Hide the loading indicator
             document.getElementById('loading').style.display = 'none';
