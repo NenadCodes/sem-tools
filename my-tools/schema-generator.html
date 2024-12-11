@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PHHXPXHG');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a list of all the search engine marketing tools we've reviewed so far."> 
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preload" href="/images/sem-tools-logo.png" as="image"> <!-- Preload logo image -->
+    <link rel="preload" href="/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/critical.css"></noscript>
+    <link rel="icon" href="/images/sem-tools-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/sem-tools-favicon.png" type="image/x-icon">
+    <style>
+        #schemaForm {
+            padding: 20px; /* Padding around the form */
+            border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+            border-radius: 5px; /* Optional: Add rounded corners */
+            background-color: #f9f9f9; /* Optional: Add a background color */
+        }
+    
+        /* Add margin to the individual fields inside the form */
+        #schemaForm .schemaFields {
+            margin-bottom: 15px; /* Increase space between form elements */
+        }
+    
+        #schemaForm label {
+            display: block; /* Ensure labels are on their own line */
+            margin-bottom: 5px; /* Space between label and input */
+        }
+    
+        #schemaForm input,
+        #schemaForm textarea {
+            width: 100%; /* Make inputs and textareas full width */
+            padding: 8px; /* Add padding inside inputs and textareas */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+    </style>
+    <title>Schema Generator | SEM-Tools</title>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHHXPXHG"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <div class="logo">
+            <a href="/index.html"> 
+                <img src="/images/sem-tools-logo.png" alt="SEM Tools Logo" width="182" height="57" style="max-width: 100%; height: auto;" />
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button> 
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/reviews.html">Reviews</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/about-me.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<section id="main-content">
+    <label for="schemaType">Select Schema Type:</label>
+    <select id="schemaType">
+        <option value="">--Select Schema Type--</option>
+        <option value="Article">Article</option>
+        <option value="VideoObject">Video Object</option>
+        <option value="WebPage">Web Page</option>
+        <option value="Product">Product</option>
+        <option value="Event">Event</option>
+        <option value="LocalBusiness">Local Business</option>
+        <option value="Person">Person</option>
+        <option value="Organization">Organization</option>
+    </select>
+
+    <form id="schemaForm" style="display: none;">
+        <!-- Dynamic schema fields will be inserted here -->
+    </form>
+
+    <h2>Generated Schema:</h2>
+    <pre id="generatedSchema"></pre>
+</section>
+
+    <script>
+        const schemaTypes = {
+            "Article": {
+                fields: [
+                    { id: "articleTitle", label: "Article Title", type: "text" },
+                    { id: "articleDescription", label: "Article Description", type: "textarea" },
+                    { id: "articleAuthor", label: "Author", type: "text" },
+                    { id: "articleDate", label: "Date Published", type: "date" },
+                    { id: "articleUrl", label: "Article URL", type: "url" }
+                ],
+                generateSchema: function() {
+                    return {
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": document.getElementById('articleTitle').value,
+                        "description": document.getElementById('articleDescription').value,
+                        "author": {
+                            "@type": "Person",
+                            "name": document.getElementById('articleAuthor').value
+                        },
+                        "datePublished": document.getElementById('articleDate').value,
+                        "url": document.getElementById('articleUrl').value
+                    };
+                }
+            },
+            "VideoObject": {
+                fields: [
+                    { id: "videoTitle", label: "Video Title", type: "text" },
+                    { id: "videoDescription", label: "Video Description", type: "textarea" },
+                    { id: "thumbnailUrl", label: "Thumbnail URL", type: "url" },
+                    { id: "uploadDate", label: "Upload Date", type: "date" },
+                    { id: "duration", label: "Duration (ISO 8601 format)", type: "text" },
+                    { id: "contentUrl", label: "Content URL", type: "url" },
+                    { id: "embedUrl", label: "Embed URL", type: "url" }
+                ],
+                generateSchema: function() {
+                    return {
+                        "@context": "https://schema.org",
+                        "@type": "VideoObject",
+                        "name": document.getElementById('videoTitle').value,
+                        "description": document.getElementById('videoDescription').value,
+                        "thumbnailUrl": document.getElementById('thumbnailUrl').value,
+                        "uploadDate": document.getElementById('uploadDate').value,
+                        "duration": document.getElementById('duration').value,
+                        "contentUrl": document.getElementById('contentUrl').value,
+                        "embedUrl": document.getElementById('embedUrl').value
+                    };
+                }
+            },
+            "WebPage": {
+                fields: [
+                    { id: "webPageTitle", label: "Web Page Title", type: "text" },
+                    { id: "webPageDescription", label: "Web Page Description", type: "textarea" },
+                    { id: "webPageUrl", label: "Web Page URL", type: "url" }
+                ],
+                generateSchema: function() {
+                    return {
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "name": document.getElementById('webPageTitle').value,
+                        "description": document.getElementById('webPageDescription').value,
+                        "url": document.getElementById('webPageUrl').value
+                    };
+                }
+            },
+            "Product": {
+                fields: [
+                    { id: "productName", label: "Product Name", type: "text" },
+                    { id: "productDescription", label: "Product Description", type: "textarea" },
+                    { id: "productImage", label: "Product Image URL", type: "url" },
+                    { id: "productUrl", label: "Product URL", type: "url" },
+                    { id: "productPrice", label: "Product Price", type: "text" },
+                    { id: "productCurrency", label: "Currency (e.g., USD)", type: "text" }
+                ],
+                generateSchema: function() {
+                    return {
+                        "@context": "https://schema.org",
+                        "@type": "Product",
+                        "name": document.getElementById('productName').value,
+                        "description": document.getElementById('productDescription').value,
+                        "image": document.getElementById('productImage').value,
+                        "url": document.getElementById('productUrl').value,
+                        "offers": {
+                            "@type": "Offer",
+                            "price": document.getElementById('productPrice').value,
+                            "priceCurrency": document.getElementById('productCurrency').value
+                        }
+                    };
+                }
+            },
+            "Event": {
+                fields: [
+                    { id: "eventName", label: "Event Name", type: "text" },
+                    { id: "eventDescription", label: "Event Description", type: "textarea" },
+                    { id: "eventStartDate", label: "Start Date", type: "date" },
+                    { id: "eventEndDate", label: "End Date", type: "date" },
+                    { id: "eventLocation", label: "Location", type: "text" }
+                ],
+                generateSchema: function() {
+                    return {
+                        "@context": "https://schema.org",
+                        "@type": "Event",
+                        "name": document.getElementById('eventName').value,
+                        "description": document.getElementById('eventDescription').value,
+                        "startDate": document.getElementById('eventStartDate').value,
+                        "endDate": document.getElementById('eventEndDate').value,
+                        "location": {
+                            "@type": "Place",
+                            "name": document.getElementById('eventLocation').value
+                        }
+                    };
+                }
+            },
+            "LocalBusiness": {
+                fields: [
+                    { id: "businessName", label: "Business Name", type: "text" },
+                    { id: "businessDescription", label: "Business Description", type: "textarea" },
+                    { id: "businessUrl", label: "Business URL", type: "url" },
+                    { id: "businessAddress", label: "Business Address", type: "text" },
+                    { id: "businessPhone", label: "Business Phone", type: "tel" }
+                ],
+                generateSchema: function() {
+                    return {
+                        "@context": "https://schema.org",
+                        "@type": "LocalBusiness",
+                        "name": document.getElementById('businessName').value,
+                        "description": document.getElementById('businessDescription').value,
+                        "url": document.getElementById('businessUrl').value,
+                        "address": document.getElementById('businessAddress').value,
+                        "telephone": document.getElementById('businessPhone').value
+                    };
+                }
+            },
+            "Person": {
+                fields: [
+                    { id: "personName", label: "Person Name", type: "text" },
+                    { id: "personDescription", label: "Description", type: "textarea" },
+                    { id: "personUrl", label: "Person URL", type: "url" },
+                    { id: "personImage", label: "Image URL", type: "url" }
+                ],
+                generateSchema: function() {
+                    return {
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "name": document.getElementById('personName').value,
+                        "description": document.getElementById('personDescription').value,
+                        "url": document.getElementById('personUrl').value,
+                        "image": document.getElementById('personImage').value
+                    };
+                }
+            },
+            "Organization": {
+                fields: [
+                    { id: "organizationName", label: "Organization Name", type: "text" },
+                    { id: "organizationDescription", label: "Description", type: "textarea" },
+                    { id: "organizationUrl", label: "Organization URL", type: "url" },
+                    { id: "organizationLogo", label: "Logo URL", type: "url" }
+                ],
+                generateSchema: function() {
+                    return {
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": document.getElementById('organizationName').value,
+                        "description": document.getElementById('organizationDescription').value,
+                        "url": document.getElementById('organizationUrl').value,
+                        "logo": document.getElementById('organizationLogo').value
+                    };
+                }
+            }
+        };
+
+        // Function to generate and display the form fields based on the selected schema type
+        function generateForm(schemaType) {
+            const form = document.getElementById('schemaForm');
+            form.innerHTML = ''; // Clear existing form fields
+            
+            const schema = schemaTypes[schemaType];
+            if (schema) {
+                schema.fields.forEach(field => {
+                    const fieldDiv = document.createElement('div');
+                    fieldDiv.classList.add('schemaFields');
+
+                    const label = document.createElement('label');
+                    label.setAttribute('for', field.id);
+                    label.innerText = field.label;
+                    fieldDiv.appendChild(label);
+
+                    const input = document.createElement(field.type === 'textarea' ? 'textarea' : 'input');
+                    input.setAttribute('id', field.id);
+                    input.setAttribute('type', field.type);
+                    input.required = true;
+                    fieldDiv.appendChild(input);
+
+                    form.appendChild(fieldDiv);
+                });
+                const submitButton = document.createElement('button');
+                submitButton.classList.add('cta-button');
+                submitButton.setAttribute('type', 'submit');
+                submitButton.innerText = 'Generate Schema';
+                form.appendChild(submitButton);
+                form.style.display = 'block';
+            }
+        }
+
+        // Event listener for schema type change
+        document.getElementById('schemaType').addEventListener('change', function() {
+            const selectedSchema = this.value;
+            if (selectedSchema) {
+                generateForm(selectedSchema);
+            } else {
+                document.getElementById('schemaForm').style.display = 'none';
+            }
+        });
+
+        // Event listener for form submission to generate schema
+        document.getElementById('schemaForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const selectedSchema = document.getElementById('schemaType').value;
+            const schema = schemaTypes[selectedSchema].generateSchema();
+            document.getElementById('generatedSchema').textContent = JSON.stringify(schema, null, 2);
+        });
+    </script>
+</body>
+</html>

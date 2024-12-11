@@ -100,5 +100,18 @@
             "height": "203"
         },
         "category": "scripts"
+    },
+
+    {
+        "title": "Schema Generator v1",
+        "description": "A script that generates common schemas.",
+        "link": "/my-tools/schema-generator.html",
+        "image": {
+            "src": "../images/script-logo.png",
+            "alt": "JS Script",
+            "width": "200",
+            "height": "203"
+        },
+        "category": "free-tools"
     }
 ]
